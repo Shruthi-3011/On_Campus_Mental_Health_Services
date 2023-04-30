@@ -1,0 +1,669 @@
+SQL> desc students
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNAME                                              VARCHAR2(20)
+ SID                                       NOT NULL VARCHAR2(15)
+ SCONNUM                                            NUMBER(15)
+ SADDRESS                                           VARCHAR2(30)
+ MHIST                                              VARCHAR2(30)
+
+SQL> insert into studnets values('&sname','&sid',&sconnum,'&saddress','&mhist');
+Enter value for sname: Shruthi
+Enter value for sid: 1602-21-737-052
+Enter value for sconnum: 9293942413
+Enter value for saddress: lbnagar
+Enter value for mhist: nill
+old   1: insert into studnets values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into studnets values('Shruthi','1602-21-737-052',9293942413,'lbnagar','nill')
+insert into studnets values('Shruthi','1602-21-737-052',9293942413,'lbnagar','nill')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into studnets values('&sname','&sid',&sconnum,'&saddress','&mhist');
+Enter value for sname: Shruthi
+Enter value for sid: 1602-21-737-052
+Enter value for sconnum: 9293942413
+Enter value for saddress: lbnagar
+Enter value for mhist: nill
+old   1: insert into studnets values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into studnets values('Shruthi','1602-21-737-052',9293942413,'lbnagar','nill')
+insert into studnets values('Shruthi','1602-21-737-052',9293942413,'lbnagar','nill')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist');
+Enter value for sname: Shruthi
+Enter value for sid: 1602-21-737-052
+Enter value for sconnum: 9293942413
+Enter value for saddress: lbnagar
+Enter value for mhist: nill
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('Shruthi','1602-21-737-052',9293942413,'lbnagar','nill')
+
+1 row created.
+
+SQL> /
+Enter value for sname: Anurag
+Enter value for sid: 1602-21-737-064
+Enter value for sconnum: 876543210
+Enter value for saddress: kothapet
+Enter value for mhist: stress
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('Anurag','1602-21-737-064',876543210,'kothapet','stress')
+
+1 row created.
+
+SQL> /
+Enter value for sname: shriya
+Enter value for sid: 1602-21-737-051
+Enter value for sconnum: 7231564724
+Enter value for saddress: suncity
+Enter value for mhist: anxiety
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('shriya','1602-21-737-051',7231564724,'suncity','anxiety')
+
+1 row created.
+
+SQL> /
+Enter value for sname: prudhvi
+Enter value for sid: 1602-21-737-040
+Enter value for sconnum: 6789435261
+Enter value for saddress: jntu
+Enter value for mhist: low bp
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('prudhvi','1602-21-737-040',6789435261,'jntu','low bp')
+
+1 row created.
+
+SQL> /
+Enter value for sname: anish
+Enter value for sid: 1602-21-737-008
+Enter value for sconnum: 9099897653
+Enter value for saddress: koti
+Enter value for mhist: high bp
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('anish','1602-21-737-008',9099897653,'koti','high bp')
+
+1 row created.
+
+SQL> /
+Enter value for sname: vanshika
+Enter value for sid: 1602-21-737-060
+Enter value for sconnum: 9876008765
+Enter value for saddress: sharath mall
+Enter value for mhist: short tempered
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('vanshika','1602-21-737-060',9876008765,'sharath mall','short tempered')
+
+1 row created.
+
+SQL> /
+Enter value for sname: deepthi
+Enter value for sid: 1602-21-737-015
+Enter value for sconnum: 9695438910
+Enter value for saddress: malakpet
+Enter value for mhist: underweight
+old   1: insert into students values('&sname','&sid',&sconnum,'&saddress','&mhist')
+new   1: insert into students values('deepthi','1602-21-737-015',9695438910,'malakpet','underweight')
+
+1 row created.
+
+SQL> select * from students
+  2  
+SQL> select * from students;
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+Shruthi              1602-21-737-052 9293942413 lbnagar                         
+nill                                                                            
+                                                                                
+Anurag               1602-21-737-064  876543210 kothapet                        
+stress                                                                          
+                                                                                
+shriya               1602-21-737-051 7231564724 suncity                         
+anxiety                                                                         
+                                                                                
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+prudhvi              1602-21-737-040 6789435261 jntu                            
+low bp                                                                          
+                                                                                
+anish                1602-21-737-008 9099897653 koti                            
+high bp                                                                         
+                                                                                
+vanshika             1602-21-737-060 9876008765 sharath mall                    
+short tempered                                                                  
+                                                                                
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+deepthi              1602-21-737-015 9695438910 malakpet                        
+underweight                                                                     
+                                                                                
+
+7 rows selected.
+
+SQL> select * from students;
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+Shruthi              1602-21-737-052 9293942413 lbnagar                         
+nill                                                                            
+                                                                                
+Anurag               1602-21-737-064  876543210 kothapet                        
+stress                                                                          
+                                                                                
+shriya               1602-21-737-051 7231564724 suncity                         
+anxiety                                                                         
+                                                                                
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+prudhvi              1602-21-737-040 6789435261 jntu                            
+low bp                                                                          
+                                                                                
+anish                1602-21-737-008 9099897653 koti                            
+high bp                                                                         
+                                                                                
+vanshika             1602-21-737-060 9876008765 sharath mall                    
+short tempered                                                                  
+                                                                                
+
+SNAME                SID                SCONNUM SADDRESS                        
+-------------------- --------------- ---------- ------------------------------  
+MHIST                                                                           
+------------------------------                                                  
+deepthi              1602-21-737-015 9695438910 malakpet                        
+underweight                                                                     
+                                                                                
+
+7 rows selected.
+
+SQL> insert into counsellor values('&cname','&cid',&cconnum,&condur,'&cdate');
+Enter value for cname: a
+Enter value for cid: 1
+Enter value for cconnum: 1234567890
+Enter value for condur: 30
+Enter value for cdate: 30-April-2023
+old   1: insert into counsellor values('&cname','&cid',&cconnum,&condur,'&cdate')
+new   1: insert into counsellor values('a','1',1234567890,30,'30-April-2023')
+insert into counsellor values('a','1',1234567890,30,'30-April-2023')
+                                      *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER 
+
+
+SQL> insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum);
+Enter value for cname: a
+Enter value for cid: 1
+Enter value for cdate: 01-APR-2023
+Enter value for condur: 30
+Enter value for cconnum: 1234567890
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('a','1','01-APR-2023',30,1234567890)
+
+1 row created.
+
+SQL> /
+Enter value for cname: b
+Enter value for cid: 2
+Enter value for cdate: 12-APR-2023
+Enter value for condur: 45
+Enter value for cconnum: 9293949589
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('b','2','12-APR-2023',45,9293949589)
+
+1 row created.
+
+SQL> /
+Enter value for cname: c
+Enter value for cid: 3
+Enter value for cdate: 14-MAR-2023
+Enter value for condur: 50
+Enter value for cconnum: 9989765430
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('c','3','14-MAR-2023',50,9989765430)
+
+1 row created.
+
+SQL> /
+Enter value for cname: d
+Enter value for cid: 4
+Enter value for cdate: 20-MAY-2023
+Enter value for condur: 60
+Enter value for cconnum: 9765487630
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('d','4','20-MAY-2023',60,9765487630)
+
+1 row created.
+
+SQL> /
+Enter value for cname: e
+Enter value for cid: 5
+Enter value for cdate: 31-MAY-2023
+Enter value for condur: 25
+Enter value for cconnum: 9692587650
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('e','5','31-MAY-2023',25,9692587650)
+
+1 row created.
+
+SQL> /
+Enter value for cname: f
+Enter value for cid: 6
+Enter value for cdate: 12-MAY-2023
+Enter value for condur: 55
+Enter value for cconnum: 9876098760
+old   1: insert into counsellor values('&cname','&cid','&cdate',&condur,&cconnum)
+new   1: insert into counsellor values('f','6','12-MAY-2023',55,9876098760)
+
+1 row created.
+
+SQL> select * from counsellor;
+
+CID             CNAME                CDATE           CDUR    CCONNUM            
+--------------- -------------------- --------- ---------- ----------            
+a               1                    01-APR-23         30 1234567890            
+b               2                    12-APR-23         45 9293949589            
+c               3                    14-MAR-23         50 9989765430            
+d               4                    20-MAY-23         60 9765487630            
+e               5                    31-MAY-23         25 9692587650            
+f               6                    12-MAY-23         55 9876098760            
+
+6 rows selected.
+
+SQL> desc services
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                VARCHAR2(15)
+ CID                                                VARCHAR2(15)
+ SERVICEID                                 NOT NULL VARCHAR2(20)
+ RDATE                                              DATE
+ STATUSREQ                                          VARCHAR2(20)
+
+SQL> insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq');
+Enter value for sid: 1602-21-737-052
+Enter value for cid: 3
+Enter value for serviceid: 20
+Enter value for rdate: 21-APR-2023
+Enter value for statusreq: completed
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-052','3','20','21-APR-2023','completed')
+insert into services values('1602-21-737-052','3','20','21-APR-2023','completed')
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SYS.FKEY_CID) violated - parent key not found 
+
+
+SQL> insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq');
+Enter value for sid: 1602-21-737-052
+Enter value for cid: c
+Enter value for serviceid: 20
+Enter value for rdate: 21-APR-2023
+Enter value for statusreq: completed
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-052','c','20','21-APR-2023','completed')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-064
+Enter value for cid: b
+Enter value for serviceid: 21
+Enter value for rdate: 30-MAY-2023
+Enter value for statusreq: pending
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-064','b','21','30-MAY-2023','pending')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-051
+Enter value for cid: d
+Enter value for serviceid: 22
+Enter value for rdate: 21-MAY-2023
+Enter value for statusreq: pending
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-051','d','22','21-MAY-2023','pending')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-040
+Enter value for cid: e
+Enter value for serviceid: 23
+Enter value for rdate: 30-APR-2023
+Enter value for statusreq: completed
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-040','e','23','30-APR-2023','completed')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-009
+Enter value for cid: 
+Enter value for serviceid: 
+Enter value for rdate: 
+Enter value for statusreq: 
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-009','','','','')
+insert into services values('1602-21-737-009','','','','')
+                                                 *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SYS"."SERVICES"."SERVICEID") 
+
+
+SQL> /
+Enter value for sid: 1602-21-737-008
+Enter value for cid: f
+Enter value for serviceid: 24
+Enter value for rdate: 1-MAY-2023
+Enter value for statusreq: pending
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-008','f','24','1-MAY-2023','pending')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-060
+Enter value for cid: a
+Enter value for serviceid: 25
+Enter value for rdate: 22-JUN-2023
+Enter value for statusreq: pending
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-060','a','25','22-JUN-2023','pending')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-015
+Enter value for cid: d
+Enter value for serviceid: 26
+Enter value for rdate: 30-MAY-2023
+Enter value for statusreq: pending
+old   1: insert into services values('&sid','&cid','&serviceid','&rdate','&statusreq')
+new   1: insert into services values('1602-21-737-015','d','26','30-MAY-2023','pending')
+
+1 row created.
+
+SQL> select * from services;
+
+SID             CID             SERVICEID            RDATE                      
+--------------- --------------- -------------------- ---------                  
+STATUSREQ                                                                       
+--------------------                                                            
+1602-21-737-052 c               20                   21-APR-23                  
+completed                                                                       
+                                                                                
+1602-21-737-064 b               21                   30-MAY-23                  
+pending                                                                         
+                                                                                
+1602-21-737-051 d               22                   21-MAY-23                  
+pending                                                                         
+                                                                                
+
+SID             CID             SERVICEID            RDATE                      
+--------------- --------------- -------------------- ---------                  
+STATUSREQ                                                                       
+--------------------                                                            
+1602-21-737-040 e               23                   30-APR-23                  
+completed                                                                       
+                                                                                
+1602-21-737-008 f               24                   01-MAY-23                  
+pending                                                                         
+                                                                                
+1602-21-737-060 a               25                   22-JUN-23                  
+pending                                                                         
+                                                                                
+
+SID             CID             SERVICEID            RDATE                      
+--------------- --------------- -------------------- ---------                  
+STATUSREQ                                                                       
+--------------------                                                            
+1602-21-737-015 d               26                   30-MAY-23                  
+pending                                                                         
+                                                                                
+
+7 rows selected.
+
+SQL> desc supportgroup
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ GID                                       NOT NULL VARCHAR2(15)
+ SERVICEID                                          VARCHAR2(20)
+ MDATE                                              DATE
+ MTIME                                              NUMBER(15)
+ MTOPIC                                             VARCHAR2(30)
+
+SQL> insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic');
+Enter value for gid: 001
+Enter value for serviceid: 20
+Enter value for mdate: 21-APR-2023
+Enter value for mtime: 3
+Enter value for mtopic: Sadness and demotivating
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('001','20','21-APR-2023',3,'Sadness and demotivating')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 002
+Enter value for serviceid: 21
+Enter value for mdate: 30-MAY-23
+Enter value for mtime: 4
+Enter value for mtopic: Stressed
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('002','21','30-MAY-23',4,'Stressed')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 003
+Enter value for serviceid: 22
+Enter value for mdate: 21-MAY-2023
+Enter value for mtime: 10
+Enter value for mtopic: anxiety
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('003','22','21-MAY-2023',10,'anxiety')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 004
+Enter value for serviceid: 23
+Enter value for mdate: 30-APR-2023
+Enter value for mtime: 12
+Enter value for mtopic: Fails to concentrate
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('004','23','30-APR-2023',12,'Fails to concentrate')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 005
+Enter value for serviceid: 24
+Enter value for mdate: 01-MAY-2023
+Enter value for mtime: 1
+Enter value for mtopic: Demotivated
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('005','24','01-MAY-2023',1,'Demotivated')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 006
+Enter value for serviceid: 25
+Enter value for mdate: 22-JUN-2023
+Enter value for mtime: 2
+Enter value for mtopic: Short tempered
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('006','25','22-JUN-2023',2,'Short tempered')
+
+1 row created.
+
+SQL> /
+Enter value for gid: 007
+Enter value for serviceid: 26
+Enter value for mdate: 30-MAY-2023
+Enter value for mtime: 4
+Enter value for mtopic: Introvert behaviour
+old   1: insert into supportgroup values('&gid','&serviceid','&mdate',&mtime,'&mtopic')
+new   1: insert into supportgroup values('007','26','30-MAY-2023',4,'Introvert behaviour')
+
+1 row created.
+
+SQL> select * from supportgroup;
+
+GID             SERVICEID            MDATE          MTIME                       
+--------------- -------------------- --------- ----------                       
+MTOPIC                                                                          
+------------------------------                                                  
+001             20                   21-APR-23          3                       
+Sadness and demotivating                                                        
+                                                                                
+002             21                   30-MAY-23          4                       
+Stressed                                                                        
+                                                                                
+003             22                   21-MAY-23         10                       
+anxiety                                                                         
+                                                                                
+
+GID             SERVICEID            MDATE          MTIME                       
+--------------- -------------------- --------- ----------                       
+MTOPIC                                                                          
+------------------------------                                                  
+004             23                   30-APR-23         12                       
+Fails to concentrate                                                            
+                                                                                
+005             24                   01-MAY-23          1                       
+Demotivated                                                                     
+                                                                                
+006             25                   22-JUN-23          2                       
+Short tempered                                                                  
+                                                                                
+
+GID             SERVICEID            MDATE          MTIME                       
+--------------- -------------------- --------- ----------                       
+MTOPIC                                                                          
+------------------------------                                                  
+007             26                   30-MAY-23          4                       
+Introvert behaviour                                                             
+                                                                                
+
+7 rows selected.
+
+SQL> desc feedback
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                       NOT NULL VARCHAR2(15)
+ RATING                                    NOT NULL NUMBER(10)
+ COMMENTS                                           VARCHAR2(20)
+
+SQL> insert into feedback values('&sid',&rating,'&comments')
+  2  
+SQL> insert into feedback values('&sid',&rating,'&comments');
+Enter value for sid: 1602-21-737-052
+Enter value for rating: 4
+Enter value for comments: good
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-052',4,'good')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-064
+Enter value for rating: 3
+Enter value for comments: can be improved
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-064',3,'can be improved')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-051
+Enter value for rating: 3.5
+Enter value for comments: satisfactory
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-051',3.5,'satisfactory')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-040
+Enter value for rating: 2.5
+Enter value for comments: not satisfied, counsellor d can improve on keeping students motivated.
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-040',2.5,'not satisfied, counsellor d can improve on keeping students motivated.')
+insert into feedback values('1602-21-737-040',2.5,'not satisfied, counsellor d can improve on keeping students motivated.')
+                                                  *
+ERROR at line 1:
+ORA-12899: value too large for column "SYS"."FEEDBACK"."COMMENTS" (actual: 70, 
+maximum: 20) 
+
+
+SQL> /
+Enter value for sid: 1602-21-737-040
+Enter value for rating: 2.5
+Enter value for comments: not satisfied
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-040',2.5,'not satisfied')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-008
+Enter value for rating: 3
+Enter value for comments: ok
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-008',3,'ok')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-060
+Enter value for rating: 4
+Enter value for comments: better
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-060',4,'better')
+
+1 row created.
+
+SQL> /
+Enter value for sid: 1602-21-737-015
+Enter value for rating: 4.5
+Enter value for comments: very good
+old   1: insert into feedback values('&sid',&rating,'&comments')
+new   1: insert into feedback values('1602-21-737-015',4.5,'very good')
+
+1 row created.
+
+SQL> select * from feedback;
+
+SID                 RATING COMMENTS                                             
+--------------- ---------- --------------------                                 
+1602-21-737-052          4 good                                                 
+1602-21-737-064          3 can be improved                                      
+1602-21-737-051          4 satisfactory                                         
+1602-21-737-040          3 not satisfied                                        
+1602-21-737-008          3 ok                                                   
+1602-21-737-060          4 better                                               
+1602-21-737-015          5 very good                                            
+
+7 rows selected.
+
+SQL> spool off;

@@ -1,0 +1,127 @@
+SQL> create table students(
+  2  sname varchar2(20),
+  3  sid varchar2(15),
+  4  sconnum number(15),
+  5  saddress varchar2(30),
+  6  mhist varchar2(40),
+  7  CONSTRAINT pkey_sid PRIMARY KEY (sid));
+
+Table created.
+
+SQL> alter table students modify mhist varchar2(30);
+
+Table altered.
+
+SQL> desc students
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNAME                                              VARCHAR2(20)
+ SID                                       NOT NULL VARCHAR2(15)
+ SCONNUM                                            NUMBER(15)
+ SADDRESS                                           VARCHAR2(30)
+ MHIST                                              VARCHAR2(30)
+
+SQL> create table services(
+  2  sid varchar2(15),
+  3  cid varchar2(15),
+  4  serviceid varchar2(20),
+  5  rdate date,
+  6  statusreq varchar2(20),
+  7  CONSTRAINT fkey_sid FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+  8  CONSTRAINT pkey_serviceid PRIMARY KEY (serviceid));
+
+Table created.
+
+SQL> create table counsellor(
+  2  cid varchar2(15),
+  3  cname varchar2(20),
+  4  cdate date,
+  5  cdur number(15),
+  6  cconnum number(15),
+  7  CONSTRAINT pkey_cid PRIMARY KEY (cid));
+
+Table created.
+
+SQL> ALTER TABLE services ADD CONSTRAINT fkey_cid FOREIGN KEY (cid) REFERENCES counsellor (cid) ON DELETE CASCADE;
+
+Table altered.
+
+SQL> desc counsellor
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CID                                       NOT NULL VARCHAR2(15)
+ CNAME                                              VARCHAR2(20)
+ CDATE                                              DATE
+ CDUR                                               NUMBER(15)
+ CCONNUM                                            NUMBER(15)
+
+SQL> desc services
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                                VARCHAR2(15)
+ CID                                                VARCHAR2(15)
+ SERVICEID                                 NOT NULL VARCHAR2(20)
+ RDATE                                              DATE
+ STATUSREQ                                          VARCHAR2(20)
+
+SQL> create table supportgroup(
+  2  gid varchar2(15),
+  3  serviceid varchar2(20),
+  4  mdate date,
+  5  mtime number(15),
+  6  mtopic varchar2(30),
+  7  CONSTRAINT pkey_gid PRIMARY KEY (gid),
+  8  CONSTRAINT fkey_serviceid FOREIGN KEY (serviceid) REFERENCES services (serviceid) ON DELETE CASCADE);
+
+Table created.
+
+SQL> desc supportgroup
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ GID                                       NOT NULL VARCHAR2(15)
+ SERVICEID                                          VARCHAR2(20)
+ MDATE                                              DATE
+ MTIME                                              NUMBER(15)
+ MTOPIC                                             VARCHAR2(30)
+
+SQL> create table feedback(
+  2  sid varchar2(15),
+  3  rating number(10),
+  4  comments varchar2(20),
+  5  CONSTRAINT fkey_sid FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+  6  CONSTRAINT pkey_sid_rating PRIMARY KEY(sid,rating));
+CONSTRAINT fkey_sid FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+           *
+ERROR at line 5:
+ORA-02264: name already used by an existing constraint 
+
+
+SQL> create table feedback(
+  2  sid varchar2(15),
+  3  rating number(10),
+  4  comments varchar2(20),
+  5  CONSTRAINT fkey_sid FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+  6  CONSTRAINT pkey_rating_comm PRIMARY KEY (rating,comments));
+CONSTRAINT fkey_sid FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+           *
+ERROR at line 5:
+ORA-02264: name already used by an existing constraint 
+
+
+SQL> create table feedback(
+  2  sid varchar2(15),
+  3  rating number(10),
+  4  comments varchar2(20),
+  5  CONSTRAINT fkey_sidd FOREIGN KEY (sid) REFERENCES students (sid) ON DELETE CASCADE,
+  6  CONSTRAINT pkey_sid_rating PRIMARY KEY (sid,rating));
+
+Table created.
+
+SQL> desc feedback
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SID                                       NOT NULL VARCHAR2(15)
+ RATING                                    NOT NULL NUMBER(10)
+ COMMENTS                                           VARCHAR2(20)
+
+SQL> spool off
